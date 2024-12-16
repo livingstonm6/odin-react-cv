@@ -4,6 +4,18 @@
   padding: 2rem;
   text-align: center;
 }
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.display {
+  display: inline-grid;
+}
+
+.cv-form {
+  display: inline-grid;
+}
 
 .logo {
   height: 6em;
