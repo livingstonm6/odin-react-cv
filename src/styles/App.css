@@ -9,6 +9,12 @@
   grid-template-columns: 1fr 1fr;
 }
 
+form{
+  display:grid;
+  grid-auto-rows: auto;
+  justify-items: start;
+}
+
 .display {
   display: inline-grid;
 }
