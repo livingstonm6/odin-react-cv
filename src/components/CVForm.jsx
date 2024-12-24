@@ -25,9 +25,9 @@ function CVForm() {
                 <label htmlFor="major">Area of Study (Major)</label>
                 <input id="major" type="text"/>
                 <label htmlFor="school-start-date">Start Date</label>
-                <input id="school-start-date" type="datetime-local"/>
+                <input id="school-start-date" type="date"/>
                 <label htmlFor="school-end-date">End Date</label>
-                <input id="school-end-date" type="datetime-local"/>
+                <input id="school-end-date" type="date"/>
 
                 <h2>Work Experience</h2>
                 <label htmlFor="job-title">Job Title</label>
@@ -37,9 +37,9 @@ function CVForm() {
                 <label htmlFor="job-location">Location</label>
                 <input id="job-location" type="text"/>
                 <label htmlFor="job-start-date">Start Date</label>
-                <input id="job-start-date" type="datetime-local"/>
+                <input id="job-start-date" type="date"/>
                 <label htmlFor="job-end-date">End Date:</label>
-                <input id="job-end-date" type="datetime-local"/>
+                <input id="job-end-date" type="date"/>
                 <label htmlFor="job-description">Description</label>
                 <input id="job-description" type="text"/>
 
