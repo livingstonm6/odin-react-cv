@@ -4,53 +4,46 @@ import Display from "./Display.jsx";
 function CVForm() {
     const [displayResume, setDisplayResume] = useState(false);
 
-    const [name, setName] = useState('');
-    const [address, setAddress] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-
-    const [school, setSchool] = useState('');
-    const [schoolLocation, setSchoolLocation] = useState('');
-    const [degree, setDegree] = useState('');
-    const [major, setMajor] = useState('');
-    const [schoolStartDate, setSchoolStartDate] = useState('');
-    const [schoolEndDate, setSchoolEndDate] = useState('')
-
-
-    const [jobTitle, setJobTitle] = useState('');
-    const [company, setCompany] = useState('');
-    const [jobLocation, setJobLocation] = useState('');
-    const [jobStartDate, setJobStartDate] = useState('');
-    const [jobEndDate, setJobEndDate] = useState('');
-    const [jobDescription, setJobDescription] = useState('');
-
+    const [resumeData, setResumeData] = useState({
+        name: '',
+        address: '',
+        email: '',
+        phone: '',
+        school: '',
+        degree: '',
+        schoolLocation: '',
+        major: '',
+        schoolStartDate: '',
+        schoolEndDate: '',
+        jobTitle: '',
+        company: '',
+        jobLocation: '',
+        jobStartDate: '',
+        jobEndDate: '',
+        jobDescription: '',
+    });
 
     function handleSubmit(formData){
-        console.log("Handling Submit");
-        console.log(Object.fromEntries(formData));
-        console.log("formData first name:");
-        console.log(formData.get("first-name"));
-        setName(formData.get("first-name") + " " + formData.get("last-name"));
-        setAddress(formData.get("address"));
-        setEmail(formData.get("email"));
-        setPhone(formData.get("phone"));
-
-        setSchool(formData.get("school"));
-        setSchoolLocation(formData.get("school-location"));
-        setDegree(formData.get("degree"));
-        setMajor(formData.get("major"));
-        setSchoolStartDate(formData.get("school-start-date"));
-        setSchoolEndDate(formData.get("school-end-date"));
-
-        setJobTitle(formData.get("job-title"));
-        setCompany(formData.get("company"));
-        setJobLocation(formData.get("job-location"));
-        setJobStartDate(formData.get("job-start-date"));
-        setJobEndDate(formData.get("job-end-date"));
-        setJobDescription(formData.get("job-description"));
+        setResumeData({
+            name: formData.get("first-name") + " " + formData.get("last-name"),
+            address: formData.get("address"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            school: formData.get("school"),
+            schoolLocation: formData.get("school-location"),
+            major: formData.get("major"),
+            degree: formData.get("degree"),
+            schoolStartDate: formData.get("school-start-date"),
+            schoolEndDate: formData.get("school-end-date"),
+            jobTitle: formData.get("job-title"),
+            company: formData.get("company"),
+            jobLocation: formData.get("job-location"),
+            jobStartDate: formData.get("job-start-date"),
+            jobEndDate: formData.get("job-end-date"),
+            jobDescription: formData.get("job-description"),
+        });
 
         setDisplayResume(true);
-
     }
 
     return(
@@ -99,10 +92,7 @@ function CVForm() {
 
                 <button type="submit">Submit</button>
             </form>
-            <Display displayResume={displayResume} name={name} address={address} email={email} phone={phone}
-            school={school} degree={degree} major={major} schoolStartDate={schoolStartDate} schoolLocation={schoolLocation}
-            schoolEndDate={schoolEndDate} jobTitle={jobTitle} company={company} jobLocation={jobLocation}
-            jobStartDate={jobStartDate} jobEndDate={jobEndDate} jobDescription={jobDescription}></Display>
+            <Display displayResume={displayResume} resumeData={resumeData}></Display>
         </div>
     )
 }
