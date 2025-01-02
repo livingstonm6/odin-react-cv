@@ -4,7 +4,7 @@ function Display(props) {
         }
         return (
         <div className="display">
-            <h1>{props.resumeData.name}</h1>
+            <h1>{props.resumeData.firstName + " " + props.resumeData.lastName}</h1>
             <h4>{props.resumeData.address + " | " + props.resumeData.email + " | " + props.resumeData.phone}</h4>
 
             <h2>{props.resumeData.school}</h2>
