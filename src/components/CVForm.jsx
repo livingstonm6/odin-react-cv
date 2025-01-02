@@ -54,14 +54,14 @@ function CVForm() {
 
     if (displayResume){
         return (
-            <div className="app">
+            <div className="resume">
                 <Display displayResume={displayResume} resumeData={resumeData}></Display>
                 <button onClick={handleEditButton}>Edit</button>
             </div>
         )
     }
     return(
-        <div className="app">
+        <div className="cv-form">
             <form action={handleSubmit}>
                 <h1>Resume Creator</h1>
                 <h2>Personal Information</h2>

@@ -4,10 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-.app {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 
 form{
   display:grid;
@@ -16,7 +12,8 @@ form{
 }
 
 .display {
-  display: inline-grid;
+  justify-items: start;
+  gap: 4px;
 }
 
 .cv-form {

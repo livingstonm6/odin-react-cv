@@ -5,18 +5,18 @@ function Display(props) {
         return (
         <div className="display">
             <h1>{props.resumeData.firstName + " " + props.resumeData.lastName}</h1>
-            <h4>{props.resumeData.address + " | " + props.resumeData.email + " | " + props.resumeData.phone}</h4>
+            <p>{props.resumeData.address + " | " + props.resumeData.email + " | " + props.resumeData.phone}</p>
 
-            <h2>{props.resumeData.school}</h2>
-            <h3>{props.resumeData.degree}</h3>
-            <h4>{props.resumeData.schoolLocation}</h4>
-            <h4>{props.resumeData.major}</h4>
-            <h4>{props.resumeData.schoolStartDate} - {props.resumeData.schoolEndDate}</h4>
+            <h2>Education</h2>
+            <p>{props.resumeData.school + " | " + props.resumeData.schoolLocation}</p>
+            <p>{props.resumeData.degree}</p>
+            <p>{props.resumeData.major}</p>
+            <p>{props.resumeData.schoolStartDate} - {props.resumeData.schoolEndDate}</p>
 
-            <h1>{props.resumeData.jobTitle}</h1>
-            <h2>{props.resumeData.company}</h2>
-            <h4>{props.resumeData.jobLocation}</h4>
-            <h4>{props.resumeData.jobStartDate} - {props.resumeData.jobEndDate}</h4>
+            <h2>Work Experience</h2>
+            <p>{props.resumeData.jobTitle}</p>
+            <p>{props.resumeData.company + " | " + props.resumeData.jobLocation}</p>
+            <p>{props.resumeData.jobStartDate} - {props.resumeData.jobEndDate}</p>
             <p>{props.resumeData.jobDescription}</p>
         </div>
     )
